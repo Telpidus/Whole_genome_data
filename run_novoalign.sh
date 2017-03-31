@@ -1,10 +1,14 @@
 #!/bin/bash
+#this script allows you to run novoalign in batch, instead of runing your alignments manually one individual at a time. 
 
-_novoalign=/Users/telma/Desktop/novoalign #novoalign path
+# You should have received a copy of the GNU General Public License V3
+# along with run_novoalign.sh If not, see <http://www.gnu.org/licenses/>.
 
-basepath="/Users/telma/Desktop/NID_supernova_TGL" #directory path where the pairs and genome files are 
+_novoalign=/Users/telpidus/Desktop/novoalign #novoalign path
 
-_genome="${basepath}/NID_supernova.ndx" #genome path
+basepath="/Users/telpidus/Desktop/data_folder" #directory path where the pairs and genome files are 
+
+_genome="${basepath}/genome.ndx" #genome path
 
 for R1 in $(ls $basepath |grep \.R1\.) #for all the files containing R1 (one per indiv) iterate and do the following 
 do
