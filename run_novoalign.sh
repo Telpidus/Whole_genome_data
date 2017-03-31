@@ -1,6 +1,7 @@
 #!/bin/bash
-#this script allows you to run novoalign in batch, instead of runing your alignments manually one individual at a time. 
-
+# Copyright 2017 Telma G. Laurentino <telma.laurentino@gmail.com>
+# this script allows you to run novoalign in batch, instead of runing your alignments manually one individual at a time. 
+# Usage: bash run_novoalign.sh
 # You should have received a copy of the GNU General Public License V3
 # along with run_novoalign.sh If not, see <http://www.gnu.org/licenses/>.
 
