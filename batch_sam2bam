@@ -1,0 +1,12 @@
+#!/bin/bash
+# Copyright 2017 Telma G. Laurentino (Telpidus) <telma.laurentino@gmail.com>
+# this script allows you to run samtools in batch, instead of converting your .sam to .bam manually, one individual at a time. 
+# written for cluster usage, easily adaptable. 
+# You should have received a copy of the GNU General Public License V3
+# along with batch_sam2bam.sh If not, see <http://www.gnu.org/licenses/>.
+
+export file= `ls /scicore/home/salzburg/guedes/sam2bam/*.sam`
+
+for $file in *.sam;
+ do samtools view -b -S $file > ${file/%.sam/.bam};
+done
