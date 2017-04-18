@@ -5,8 +5,8 @@
 # You should have received a copy of the GNU General Public License V3
 # along with batch_sam2bam.sh If not, see <http://www.gnu.org/licenses/>.
 
-export file= `ls /scicore/home/salzburg/guedes/sam2bam/*.sam`
+export file=`ls path_to_your_sams/*.sam`
 
 for $file in *.sam;
- do samtools view -b -S $file > ${file/%.sam/.bam};
+ do samtools view -@ 4 -b -S $file > ${file/%.sam/.bam};
 done
